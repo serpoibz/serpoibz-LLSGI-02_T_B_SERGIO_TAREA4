@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+    
+  <category>
+    <pattern>Habláme sobre *</pattern>
+    <template>
+        Aquí hay alguna información sobre <star/>
+        <button>
+            <text>Haga clic aquí</text>
+            <url>https://es.wikipedia.org/wiki/<star/></url>
+        </button>
+    </template>
+  </category>
+
+<category>
+    <pattern>Muéstrame el mapa de *</pattern>
+    <template>
+        Aquí hay un mapa de <star/>
+        <button>
+            <text>Haga clic aquí</text>
+            <url>https://www.google.es/maps?q=<star/></url>
+        </button>
+    </template>
+  </category>
+  
+<category>
+    <pattern>Que tiempo hace en *</pattern>
+    <template>
+        Espero que haga un buen día en <star/>
+        <button>
+            <text>Haga clic aquí</text>
+            <url>https://www.weather-forecast.com/locations/<star/></url>
+        </button>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>Habláme sobre *</pattern>
+    <template>
+        Aquí hay alguna información sobre <star/>
+        <button>
+            <text>Haga clic aquí</text>
+            <url>https://es.wikipedia.org/wiki/<star/></url>
+        </button>
+    </template>
+  </category>
+  
+  <category>
+      <pattern>Habláme sobre *</pattern>
+      <template>
+          <think><set name="eso"><star/></set></think>
+          Aquí hay alguna información sobre
+          <button>
+            <text>Haga clic aquí</text>
+            <url>https://es.wikipedia.org/wiki/<star/></url>  
+          </button>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>Habláme sobre eso *</pattern>
+      <template>
+          <condition name="eso">
+              <li value="*"><srai>Habláme de <get name="eso"/></srai></li>
+              <li>¿Informarle sobre eso?</li>
+          </condition>
+      </template>
+  </category>
+</aiml>

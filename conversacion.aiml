@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    
+  <category>
+    <pattern>*</pattern>
+    <template>No tengo respuesta para esto.</template>
+  </category>
+  
+<category>
+    <pattern>Hola</pattern>
+    <template>
+        <think><set name="Hola"></set></think>
+        <random>
+            <li>Hola, como estas? Que tal el día.</li>
+            <li>Buenos días, como fue el día.</li>
+            <li>Buenas tardes, que tal todo.</li>
+            <li>Buenas noches, que tal fue el día.</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>Muy bien y tu</pattern>
+    <template>
+        <random>
+            <li>Me alegra oir eso! Para mi ha sido un día muy diverto. Menuda fiesta!!!</li>
+            <li>Me alegro!!! para mi también ha sido el día perfecto 😀</li>
+            <li>Que bien!!! Lo he pasado genial!!!</li>
+            <li>Estoy contento! Yo no me puedo quejar, hay días peores...</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>Horrible y tu</pattern>
+    <template>
+        <random>
+            <li>No me gusta oir eso, espero que mañana sea mejor. Yo he tenido un día regular...</li>
+            <li>Que mal suena eso... No hay que perder el animo. Para mi ha sido un dia casi perfecto.</li>
+            <li>Descansa y veras como mañana ira todo mejor 😉</li>
+            <li>Todos tenemos días malos, yo lo tuve ayer.</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>Que podemos hacer ahora</pattern>
+    <template>
+        <random>
+            <li>Podríamos ver esta pelicula
+            <button>
+                <text>Perdiendo el este</text>
+                <url>https://www.youtube.com/watch?v=mk6emYVqMCE</url>
+            </button>
+            </li>
+            <li>Podríamos ver esta pelicula
+            <button>
+                <text>Villaciosa de al lado</text>
+                <url>https://www.youtube.com/watch?v=w8lZGYXhZNw</url>
+            </button>
+            </li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>Buscame informacion sobre la pelicula *</pattern>
+    <template>
+        <think><set name="la"><star/></set></think>
+        Aqui hay información sobre esto<star/>
+        <button>
+            <text>Mira aqui</text>
+            <url>http://concursos.estamosrodando.com/</url>
+        </button>
+    </template>
+</category>
+
+<category>
+    <pattern>Donde podemos ir</pattern>
+    <template>
+        <random>
+            <li>Podemos ir a la playa</li>
+            <li>te apetece un cine...</li>
+            <li>Nos quedamos en casa tranquilos</li>
+            <li>Fiesta, fiesta...</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>Una estupenda idea</pattern>
+    <template>
+        <random>
+            <li>Gracias</li>
+            <li>Me alegra que te guste.</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>Alguna sugerencia extra</pattern>
+    <template>
+        <random>
+            <li>Siento que no te hayan gustado</li>
+            <li>voy a ver</li>
+        </random>
+    </template>
+</category>
+
+<category>
+    <pattern>*</pattern>
+        <template>
+            <random>
+                <li>No te entiendo. </li>
+                <li>Haz las preguntas correctas. </li>
+                <li>La pregunta es incorrecta. </li>
+                <li>Porfavor escribe bien. </li>
+            </random>
+        </template>
+</category>
+</aiml>
